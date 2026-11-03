@@ -1,0 +1,18 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: customer-service
+  datasource:
+    url: jdbc:hsqldb:mem:customerdb
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/schema.sql
+      data-locations: classpath:db/data.sql
+  jpa:
+    hibernate:
+      ddl-auto: none
+  messages:
+    basename: messages/messages
